@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    background: #0072ff;
+    border: 2px solid #0072ff;
+    border-radius: 5px;
+    transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    background: #005bb5;
+    border-color: #005bb5;
+    transform: scale(1.05);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Changed from center to flex-start to align items properly */
+    padding: 20px 0;
+}
+
+.logo-container {
+    position: relative;
+    text-align: center;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 160px #ff0000;
+    }
+    50% {
+        box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px #ff00ff, 0 0 160px #ff00ff, 0 0 320px #ff00ff;
+    }
+    100% {
+        box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 160px #ff0000;
+    }
+}
+
+.logo {
+    max-width: 150px;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    animation: glow 1.5s infinite;
+}
+
+.logo-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    margin: 0 10px;
+}
+
+.icon img {
+    max-width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.icon img:hover {
+    transform: scale(1.1);
+}
+
+.about {
+    width: 70%;
+    margin-left: 20px; /* Added margin to move it to the right */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h1 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+.contact {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.contact a {
+    color: #0072ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #0044ff;
+}

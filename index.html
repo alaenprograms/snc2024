@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNC Nutrition Centre</title>
+    <link rel="stylesheet" href="styles.css">
+
+       <script>
+        let clickCount = 0;
+
+        function handleClick() {
+            clickCount++;
+            if (clickCount === 3) {
+                window.location.href = 'admin_login.php';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="SNC Logo" class="logo">
+            <h1 class="slogan">Your Path to Wellness</h1>
+        </header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="photos.php">Photos</a></li>
+                <li><a href="bmi.html">BMI</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="about">
+                <h2>Welcome to SNC Nutrition Centre</h2>
+                <p>At SNC Nutrition Centre, we are dedicated to transforming lives through our comprehensive wellness programs. Our offerings include weight loss, weight gain, and weight management programs tailored to your unique needs. We believe in the power of holistic health and are committed to guiding you every step of the way on your journey to a healthier, happier you.</p>
+                <p><strong>"Transform Your Health, Transform Your Life"</strong></p>
+                <p>Our extensive range of products is designed to address various health conditions, providing you with the tools you need to achieve optimal wellness. From nutritional supplements to personalized meal plans, we have everything you need to succeed. Our products have produced remarkable, eye-catching before-and-after results that are truly magical.</p>
+                <p><strong>"Discover the Magic of Wellness"</strong></p>
+                <p>In addition to our top-notch products, we offer exciting discounts to make your journey to health more affordable. At SNC Nutrition Centre, we believe that achieving your wellness goals should be accessible to everyone. Our community is vibrant and supportive, with regular parties and meetups to celebrate your successes and keep you motivated.</p>
+                <p class="slogan" onclick="handleClick()"><strong style="font-size: 15px; color: black">"Health is Wealth - Invest in Yourself"</strong></p>
+                <p>We know that a healthier body leads to better decisions, and we're here to support you in making those decisions. Our dedicated team of experts will assess your health condition and provide personalized treatment and guidance. We are passionate about helping you reach your full potential.</p>
+                <p><strong>"Your Health, Our Mission"</strong></p>
+                <p>Join us in our innovative free camps and programs where we share the latest in health and wellness research, offer free health checks, and provide guidance on how to maintain a healthy lifestyle. To take part in our programs, please fill in the details below and click submit.</p>
+            </section>
+            <section id="user-details">
+                <h2>Join Our Program</h2>
+             <form action="submit_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" required>
+                    
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                    
+                    <label for="program">Program:</label>
+                    <select id="program" name="program">
+                        <option value="weight_loss">Weight Loss</option>
+                        <option value="weight_gain">Weight Gain</option>
+                        <option value="weight_management">Weight Management</option>
+                    </select>
+                    
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 SNC Nutrition Centre. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
